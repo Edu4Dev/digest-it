@@ -1,0 +1,44 @@
+{
+  "name": "digest-it",
+  "version": "0.1.1",
+  "description": "web tools",
+  "main": "index.js",
+  "bin": {
+    "digest-it": "CLI.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./triggers/build.js && next dev",
+    "build": "node ./triggers/build.js && next build",
+    "digest": "node ./triggers/digest.js",
+    "atom": "node ./triggers/atom.js",
+    "autogpt": "node ./triggers/chatGPT-auto.js",
+    "chatgpt": "node ./triggers/chatGPT.js",
+    "content": "node ./triggers/content.js",
+    "decap": "node ./triggers/decap.js",
+    "schedule": "node ./triggers/post-schedule.js",
+    "rss": "node ./triggers/rss.js",
+    "sass": "node ./triggers/sass.js",
+    "sitemaps": "node ./triggers/sitemaps.js",
+    "stories": "node ./triggers/amp-stories.js",
+    "static": "node ./triggers/static.js",
+    "update": "node ./triggers/post-update.js",
+    "workflows": "node ./triggers/workflows.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edu4Dev/digest-it.git"
+  },
+  "keywords": [
+    "digest"
+  ],
+  "author": "Milton Bolonha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edu4Dev/digest-it/issues"
+  },
+  "homepage": "https://github.com/Edu4Dev/digest-it#readme"
+}

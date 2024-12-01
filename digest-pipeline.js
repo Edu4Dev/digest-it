@@ -28,7 +28,7 @@ const {
 //   generateMonthlyUpdateYML,
 //   generateTriggerUpdateYML,
 // } = require("./lib/update");
-const promptsToPostProcessor = require("./prompts-to-post");
+const promptsToPostProcessor = require("./lib/prompts-to-post");
 // const {
 //   generateGPTWorkFlow,
 //   deleteGPTWorkflows,
