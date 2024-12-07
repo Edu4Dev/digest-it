@@ -24,9 +24,8 @@
 
 - **GitHub**: Native integration with repositories and workflows.
 - **GitHub Actions**: Automated tasks and configurable triggers.
-- **Netlify**: Export and manage static files.
 - **Static Files**: Generation of static files, sitemaps, and feeds.
-- **Cloudinary**: Image automation support.
+- **Cloudinary**: Image import automation support.
 - **ChatGPT**: AI-powered content creation.
 
 ### **Digest It Main Pipeline**

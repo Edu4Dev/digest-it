@@ -24,9 +24,8 @@
 
 - **GitHub**: Integração nativa com repositórios e workflows.
 - **GitHub Actions**: Tarefas automatizadas e gatilhos configuráveis.
-- **Netlify**: Exportação e gerenciamento de arquivos estáticos.
 - **Static Files**: Geração de arquivos estáticos, sitemaps e feeds.
-- **Cloudinary**: Suporte à automação de imagens.
+- **Cloudinary**: Suporte à automação de importação de imagens.
 - **ChatGPT**: Criação de conteúdo com IA.
 
 ### **Pipeline Principal do Digest It**
@@ -57,9 +56,9 @@
 
 **Digest It** é ideal nas seguintes situações:
 
-1. **Automação de Conteúdo**: Geração de sitemaps, feeds RSS/Atom, e organização de arquivos.
-2. **Integração de IA**: Fluxos automatizados com respostas dinâmicas do ChatGPT.
-3. **Sincronização**: Consolidação de pastas públicas e estáticas em projetos.
+1. **Automação de Conteúdo**: Geração de sitemaps, feeds RSS/Atom, e organização de arquivos estáticos.
+2. **Integração de IA**: Fluxos automatizados para criação de conteúdo com AI ChatGPT.
+3. **Sincronização**: Sincronia de pastas de arquivos públicos e estáticos em projetos.
 4. **Gerenciamento de Workflows**: Simplifique e otimize pipelines no GitHub Actions.
 5. **Agendamento de Tarefas**: Automatize atualizações e publicações de conteúdo.
 
