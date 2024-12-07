@@ -2,6 +2,41 @@
 
 **Digest It** é um módulo NPM que integra pipelines personalizados, automação de conteúdo e suporte a ferramentas como GitHub Actions, Netlify e ChatGPT.
 
+## 🚀 Funcionalidades Detalhadas
+
+- **Geração de RSS e Atom**: Criação automática de feeds para facilitar a distribuição de conteúdo.
+- **Geração de Meta tags e Schema JSON-LD**: Otimização SEO com metadados estruturados.
+- **Geração e Visualização de Sitemaps**: Facilita o rastreamento pelos mecanismos de busca.
+- **Sincronização de Arquivos Públicos**: Garante que os últimos arquivos estão disponíveis.
+- **Otimização de Scripts e Imagens**: Melhoria do desempenho do site.
+- **Integrações Avançadas**: Inclui Cloudinary, Google Analytics, Netlify, e mais.
+
+## 🏗️ Estrutura de Pipeline
+
+### **Pre-Build Sync Pipeline**
+
+1. Criação de JSON a partir de arquivos Markdown.
+
+### **Build Pipeline**
+
+1. Geração de sitemaps.
+2. Geração de ads.txt.
+3. Geração de arquivos SCSS.
+4. Sincronização de arquivos públicos.
+5. Limpeza de arquivos antigos de GitHub Actions.
+6. Agendamento de posts.
+
+### **Post Build GitHub Actions**
+
+1. Agendamento de posts.
+2. Atualização de conteúdo.
+
+## 🔌 Integrações e Tecnologias de Desenvolvimento
+
+- **Decap CMS**: Gerenciamento de conteúdo simplificado.
+- **SendGrid**: Para necessidades de marketing por email.
+- **Google Tag Manager e AdSense**: Gerenciamento de tags e monetização.
+
 ## ✅ Pré-requisitos
 
 1. **Node.js**: Requer versão >= 20.12.2.
@@ -136,35 +171,6 @@ const pipeline = new DigestPipeline(
 pipeline.run();
 ```
 
-## 🚀 Funcionalidades Detalhadas
-
-- **Geração de RSS e Atom**: Criação automática de feeds para facilitar a distribuição de conteúdo.
-- **Geração de Meta tags e Schema JSON-LD**: Otimização SEO com metadados estruturados.
-- **Geração e Visualização de Sitemaps**: Facilita o rastreamento pelos mecanismos de busca.
-- **Sincronização de Arquivos Públicos**: Garante que os últimos arquivos estão disponíveis.
-- **Otimização de Scripts e Imagens**: Melhoria do desempenho do site.
-- **Integrações Avançadas**: Inclui Cloudinary, Google Analytics, Netlify, e mais.
-
-## 🏗️ Estrutura de Pipeline
-
-### **Pre-Build Sync Pipeline**
-
-1. Criação de JSON a partir de arquivos Markdown.
-
-### **Build Pipeline**
-
-1. Geração de sitemaps.
-2. Geração de ads.txt.
-3. Geração de arquivos SCSS.
-4. Sincronização de arquivos públicos.
-5. Limpeza de arquivos antigos de GitHub Actions.
-6. Agendamento de posts.
-
-### **Post Build GitHub Actions**
-
-1. Agendamento de posts.
-2. Atualização de conteúdo.
-
 ## 📈 Vantagens Comerciais
 
 - **Tecnologias Gratuitas**: Utilize tecnologias de código aberto sem custos adicionais.
@@ -172,17 +178,3 @@ pipeline.run();
 - **Alto Desempenho**: Aplicações rápidas e escaláveis.
 - **SEO Excelente**: Otimização integrada para melhor ranking nos motores de busca.
 - **Automação**: Workflows automatizados para aumentar a eficiência.
-
-## 🔌 Integrações e Tecnologias de Desenvolvimento
-
-- **Decap CMS**: Gerenciamento de conteúdo simplificado.
-- **SendGrid**: Para necessidades de marketing por email.
-- **Google Tag Manager e AdSense**: Gerenciamento de tags e monetização.
-
-## 📊 Qualidade do Código
-
-- **Alta Manutenibilidade**: Código bem estruturado e fácil de modificar.
-- **Segurança de Classe A**: Proteção robusta contra ameaças.
-- **Sonar Cloud Guarantee**: Garantia total de qualidade e conformidade de código.
-
-Este README fornece uma visão geral robusta e detalhada das capacidades do módulo **Digest It**, incluindo instruções de uso, exemplos práticos, e uma explicação das funcionalidades e integrações disponíveis.
