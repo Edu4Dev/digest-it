@@ -1,6 +1,6 @@
 {
   "name": "digest-it",
-  "version": "0.1.46",
+  "version": "0.1.47",
   "description": "web tools",
   "main": "index.js",
   "engines": {
@@ -46,6 +46,7 @@
   },
   "homepage": "https://github.com/Edu4Dev/digest-it#readme",
   "dependencies": {
-    "axios": "^1.7.9"
+    "axios": "^1.7.9",
+    "sharp": "^0.33.5"
   }
 }
