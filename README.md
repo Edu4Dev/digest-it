@@ -9,14 +9,17 @@
 - **Sitemap Generation and Visualization**: Facilitates crawling by search engines.
 - **Public File Synchronization**: Ensures the latest files are available.
 - **Script and Image Optimization**: Enhances site performance.
-- **Advanced Integrations**: Includes Cloudinary, Google Analytics, Netlify, and more.  
-
+- **Advanced Integrations**: Includes Cloudinary, Google Analytics, Netlify, and more.
 
 # 🏗️ Pipeline Structure
 
 ## **Pre-Build Sync Pipeline**
 
-1. Creation of JSON from Markdown files.
+1. Creation of JSON from Markdown files;
+2. ~Data API fetch~;
+3. ~Real-Time Sync~;
+4. ~Data API Websocket~;
+5. Creation of JSON from data.
 
 ## **Build Pipeline**
 
@@ -36,8 +39,7 @@
 
 - **Decap CMS**: Simplified content management.
 - **SendGrid**: For email marketing needs.
-- **Google Tag Manager and AdSense**: Tag management and monetization.  
-
+- **Google Tag Manager and AdSense**: Tag management and monetization.
 
 # ✅ Prerequisites
 
@@ -53,8 +55,7 @@
 - **GitHub Workflow**: Task automation directly in GitHub's CI/CD pipeline.
 - **package.json**: Local scripts integrated into the project.
 - **npx**: Direct execution for quick tasks without installation.
-- **JS Class**: Programmatic use in custom projects.  
-
+- **JS Class**: Programmatic use in custom projects.
 
 # ✨ Digest It - Project Summary
 
@@ -64,8 +65,7 @@
 - **GitHub Actions**: Automated tasks and configurable triggers.
 - **Static Files**: Generation of static files, sitemaps, and feeds.
 - **Cloudinary**: Automation support for image import.
-- **ChatGPT**: AI-based content creation.  
-
+- **ChatGPT**: AI-based content creation.
 
 ## **Digest It Main Pipeline**
 

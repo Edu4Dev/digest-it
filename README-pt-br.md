@@ -25,7 +25,11 @@
 
 ## **Pre-Build Sync Pipeline**
 
-1. Criação de JSON a partir de arquivos Markdown.
+1. Captura de Dados via arquivos Markdown;
+2. ~Captura de Dados via API~;
+3. ~Sincronização em Tempo Real~;
+4. ~Data API Websocket~;
+5. Criação de JSON com dados captados.
 
 ## **Build Pipeline**
 
