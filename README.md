@@ -41,7 +41,9 @@ All you need it's to set your own settings and content (MD available only) and i
 
 - 🔌 **Decap CMS**: Simplified content management.
 - 🔌 **SendGrid**: For email marketing needs.
-- 🔌 **Google Tag Manager and AdSense**: Tag management and monetization.
+- 🔌 **Cloudinary**: upload images.
+- 🔌 **ChatGPT**: AI post generation.
+- 🔌 **GitHub Actions**: Automatization for everything.
 
 # Prerequisites
 
