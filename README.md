@@ -75,7 +75,29 @@ npx digest-it update
 
 ```json
 "scripts": {
-  "update": "node ./node_modules/digest-it/triggers/post-update.js"
+  // Ways to use
+  "update": "node ./node_modules/digest-it/triggers/post-update.js", // root local project
+  "update": "node ../node_modules/digest-it/triggers/post-update.js", // inside workspace
+  "update": "npx digest-it update", // using npx
+  "update": "npm digest-it update", // using npm
+  // (...)
+  // Using Next.JS
+  "dev": "node ./node_modules/digest-it/triggers/build.js && next dev",
+  "build": "node ./node_modules/digest-it/triggers/build.js && next build",
+  // Another triggers
+  "digest": "node ./node_modules/digest-it/triggers/digest.js",
+  "atom": "node ./node_modules/digest-it/triggers/atom.js",
+  "autogpt": "node ./node_modules/digest-it/triggers/chatGPT-auto.js",
+  "chatgpt": "node ./node_modules/digest-it/triggers/chatGPT.js",
+  "content": "node ./node_modules/digest-it/triggers/content.js",
+  "decap": "node ./node_modules/digest-it/triggers/decap.js",
+  "schedule": "node ./node_modules/digest-it/triggers/post-schedule.js",
+  "rss": "node ./node_modules/digest-it/triggers/rss.js",
+  "sass": "node ./node_modules/digest-it/triggers/sass.js",
+  "sitemaps": "node ./node_modules/digest-it/triggers/sitemaps.js",
+  "stories": "node ./node_modules/digest-it/triggers/amp-stories.js",
+  "static": "node ./node_modules/digest-it/triggers/static.js",
+  "workflows": "node ./node_modules/digest-it/triggers/workflows.js"
 }
 ```
 

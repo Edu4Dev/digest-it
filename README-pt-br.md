@@ -16,8 +16,7 @@
 - **GitHub Workflow**: Automação de tarefas diretamente no CI/CD pipeline do GitHub.
 - **package.json**: Scripts locais integrados no projeto.
 - **npx**: Execução direta para tarefas rápidas sem instalação.
-- **Classe JS**: Uso programático em projetos personalizados.  
-
+- **Classe JS**: Uso programático em projetos personalizados.
 
 ## ✨ Digest It - Resumo do Projeto
 
@@ -76,7 +75,29 @@ npx digest-it update
 
 ```json
 "scripts": {
-  "update": "node ./node_modules/digest-it/triggers/post-update.js"
+  // Formas de usar
+  "update": "node ./node_modules/digest-it/triggers/post-update.js", // root local project
+  "update": "node ../node_modules/digest-it/triggers/post-update.js", // inside workspace
+  "update": "npx digest-it update", // using npx
+  "update": "npm digest-it update", // using npm
+  // (...)
+  // Next.JS
+  "dev": "node ./node_modules/digest-it/triggers/build.js && next dev",
+  "build": "node ./node_modules/digest-it/triggers/build.js && next build",
+  // Outros gatilhos
+  "digest": "node ./node_modules/digest-it/triggers/digest.js",
+  "atom": "node ./node_modules/digest-it/triggers/atom.js",
+  "autogpt": "node ./node_modules/digest-it/triggers/chatGPT-auto.js",
+  "chatgpt": "node ./node_modules/digest-it/triggers/chatGPT.js",
+  "content": "node ./node_modules/digest-it/triggers/content.js",
+  "decap": "node ./node_modules/digest-it/triggers/decap.js",
+  "schedule": "node ./node_modules/digest-it/triggers/post-schedule.js",
+  "rss": "node ./node_modules/digest-it/triggers/rss.js",
+  "sass": "node ./node_modules/digest-it/triggers/sass.js",
+  "sitemaps": "node ./node_modules/digest-it/triggers/sitemaps.js",
+  "stories": "node ./node_modules/digest-it/triggers/amp-stories.js",
+  "static": "node ./node_modules/digest-it/triggers/static.js",
+  "workflows": "node ./node_modules/digest-it/triggers/workflows.js"
 }
 ```
 
@@ -123,8 +144,7 @@ pipeline.run();
 - **Geração e Visualização de Sitemaps**: Facilita o rastreamento pelos mecanismos de busca.
 - **Sincronização de Arquivos Públicos**: Garante que os últimos arquivos estão disponíveis.
 - **Otimização de Scripts e Imagens**: Melhoria do desempenho do site.
-- **Integrações Avançadas**: Inclui Cloudinary, Google Analytics, Netlify, e mais.  
-
+- **Integrações Avançadas**: Inclui Cloudinary, Google Analytics, Netlify, e mais.
 
 ## 🏗️ Estrutura de Pipeline
 
@@ -152,21 +172,18 @@ pipeline.run();
 - **Fácil Manutenção**: Código inteligente e técnicas low-code.
 - **Alto Desempenho**: Aplicações rápidas e escaláveis.
 - **SEO Excelente**: Otimização integrada para melhor ranking nos motores de busca.
-- **Automação**: Workflows automatizados para aumentar a eficiência.  
-
+- **Automação**: Workflows automatizados para aumentar a eficiência.
 
 ## 🔌 Integrações e Tecnologias de Desenvolvimento
 
 - **Decap CMS**: Gerenciamento de conteúdo simplificado.
 - **SendGrid**: Para necessidades de marketing por email.
-- **Google Tag Manager e AdSense**: Gerenciamento de tags e monetização.  
-
+- **Google Tag Manager e AdSense**: Gerenciamento de tags e monetização.
 
 ## 📊 Qualidade do Código
 
 - **Alta Manutenibilidade**: Código bem estruturado e fácil de modificar.
 - **Segurança de Classe A**: Proteção robusta contra ameaças.
-- **Sonar Cloud Guarantee**: Garantia total de qualidade e conformidade de código.  
-
+- **Sonar Cloud Guarantee**: Garantia total de qualidade e conformidade de código.
 
 Este README fornece uma visão geral robusta e detalhada das capacidades do módulo **Digest It**, incluindo instruções de uso, exemplos práticos, e uma explicação das funcionalidades e integrações disponíveis.
