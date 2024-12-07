@@ -1,10 +1,8 @@
 # Digest It - Automation for CI/CD and Content Management
 
-**Digest It** is an NPM module that integrates custom pipelines, content automation, and support for tools like GitHub Actions, Netlify, and ChatGPT.
+**Digest It** is an NPM module that integrates your content with static files generation, custom pipelines, content automation, and support for tools like GitHub Actions, Netlify, and ChatGPT.
 
-In a traditional pipeline process, data flows from one phase to another in a linear, predefined manner. However, what sets our approach apart is dynamic customization.
-
-Instead of following a rigid, fixed-conveyor belt flow, we offer the ability to choose events, tasks, or processes to be applied at each phase, allowing the developer or user to customize their data journey based on their needs at the time.
+All you need it's to set your own settings and content (MD available only) and instead of following a rigid, fixed-conveyor belt flow, we offer the ability to choose events, tasks, or processes to be applied at each phase, allowing the developer or user to customize their data journey based on their needs at the time.
 
 # Detailed Features
 
