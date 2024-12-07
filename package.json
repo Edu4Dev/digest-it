@@ -1,8 +1,12 @@
 {
   "name": "digest-it",
-  "version": "0.1.1",
+  "version": "0.1.46",
   "description": "web tools",
   "main": "index.js",
+  "engines": {
+    "node": "^20.12.2",
+    "npm": "^10.5.0"
+  },
   "bin": {
     "digest-it": "CLI.js"
   },
@@ -40,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/Edu4Dev/digest-it/issues"
   },
-  "homepage": "https://github.com/Edu4Dev/digest-it#readme"
+  "homepage": "https://github.com/Edu4Dev/digest-it#readme",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
 }

@@ -1,6 +1,6 @@
 const path = require("path"); // Não esqueça de importar o módulo `path` se ainda não foi feito
 const appRoot = require("app-root-path");
-const env = path.join(__dirname, `${appRoot}/core/.env`);
+const env = appRoot + `/core/.env`;
 
 require("dotenv").config({
   path: env,
