@@ -2,18 +2,62 @@
 
 **Digest It** é um módulo NPM que integra pipelines personalizados, automação de conteúdo e suporte a ferramentas como GitHub Actions, Netlify e ChatGPT.
 
+[](https://github.com/Edu4Dev/digest-it)
+
 Em um processo de pipeline tradicional, os dados fluem de uma fase para outra de maneira linear e predefinida. Porém, o que diferencia nossa abordagem é a customização dinâmica.
 
 Em vez de seguir um fluxo rígido, como uma esteira fixa, nós oferecemos a possibilidade de escolher eventos, tarefas ou processos a serem aplicados em cada fase, permitindo ao desenvolvedor ou usuário personalizar sua jornada de dados com base nas necessidades do momento.
 
-# Funcionalidades Detalhadas
+# ✨ **Recursos Principais**
 
-- **Geração de RSS e Atom**: Criação automática de feeds para facilitar a distribuição de conteúdo.
-- **Geração de Meta tags e Schema JSON-LD**: Otimização SEO com metadados estruturados.
-- **Geração e Visualização de Sitemaps**: Facilita o rastreamento pelos mecanismos de busca.
-- **Sincronização de Arquivos Públicos**: Garante que os últimos arquivos estão disponíveis.
-- **Otimização de Scripts e Imagens**: Melhoria do desempenho do site.
-- **Integrações Avançadas**: Inclui Cloudinary, Google Analytics, Netlify, e mais.
+✅ **Escalabilidade Modular**: Baseado em classes configuráveis e seguras.  
+✅ **Configuração Simples**: Arquivos YAML/JSON centralizam todas as configurações.  
+✅ **Retry Automático**: Sistema robusto de tentativa para evitar falhas.  
+✅ **Geração de Sitemaps e Feeds**: Indexação otimizada de conteúdos.  
+✅ **Paralelismo**: Gera arquivos estáticos de forma assíncrona e rápida.  
+✅ **Logs Detalhados**: Monitoramento com debug configurável.  
+✅ **Extensível**: Adicione novos componentes sem quebrar o fluxo.
+
+## Fluxo do Pipe
+
+```
+flowchart TD
+    Start([🚀 Início da Pipeline])
+    InitPipe([🔑 Etapa Inicial])
+    FileSetup([📂 Configuração de Arquivos])
+    PromptProcessing([🧠 Processamento de Prompts])
+    StaticFiles([📝 Geração de Arquivos Estáticos])
+    FinalStep([🏁 Etapa Final])
+    End([✅ Conclusão])
+
+    Start --> InitPipe
+    InitPipe --> FileSetup
+    FileSetup --> PromptProcessing
+    PromptProcessing --> StaticFiles
+    StaticFiles --> FinalStep
+    FinalStep --> End
+```
+
+---
+
+# 🚦 **Uso**
+
+## **Inicialização da Pipeline**
+
+```javascript
+const DigestPipeline = require("./main");
+const pipeline = new DigestPipeline(
+  userConfigs, // Configurações do usuário
+  userPaths, // Caminhos de arquivos
+  userKeys, // Chaves de API
+  autoPost, // Automação de postagem (boolean)
+  userDebug // Debug (boolean)
+);
+
+pipeline.run();
+```
+
+---
 
 # Quando Você Deve Usar Isso?
 

@@ -1,3 +1,8 @@
+// Core Name: Digest Pipeline
+// Repo URI: https://github.com/Edu4Dev/digest-it
+// Description: Build init digest core
+// Author: Milton Bolonha
+
 const BasePipeline = require("./classes/BasePipeline");
 const FileHandler = require("./classes/FileHandler");
 const PromptProcessor = require("./classes/PromptProcessor");
@@ -7,7 +12,19 @@ const mainProps = require("./config");
 const debugMe = require("./utils/debugMe"); // Logs detalhados com debugMe
 const initialPipe = require("./digest-pipeline").initialPipe;
 
+/**
+ * Class representing the DigestPipeline.
+ * Extends the BasePipeline to provide functionalities for processing and generating static content.
+ */
 class DigestPipeline extends BasePipeline {
+  /**
+   * Creates an instance of DigestPipeline.
+   * @param {Object} userConfigs - User-defined configurations to override defaults.
+   * @param {Object} userPaths - User-defined paths for files and folders.
+   * @param {Object} userKeys - API keys or secret credentials.
+   * @param {boolean} autoPost - Whether to enable automatic posting.
+   * @param {boolean} userDebug - Whether to enable debug logs.
+   */
   constructor(
     userConfigs = {},
     userPaths = {},
@@ -31,6 +48,11 @@ class DigestPipeline extends BasePipeline {
     this.scheduledPosts = this.safeRequire(this.paths.scheduledPostsFile);
   }
 
+  /**
+   * Safely requires a file and handles errors.
+   * @param {string} path - The file path to require.
+   * @returns {Object|null} The required module or null if failed.
+   */
   safeRequire(path) {
     try {
       return require(path);
@@ -40,7 +62,13 @@ class DigestPipeline extends BasePipeline {
     }
   }
 
-  // Retry helper
+  /**
+   * Helper function to retry a function multiple times.
+   * @param {string} label - A descriptive label for the operation.
+   * @param {Function} fn - The function to execute.
+   * @param {Array} args - Arguments to pass to the function.
+   * @param {number} retries - Number of retry attempts.
+   */
   async withRetry(label, fn, args = [], retries = 3) {
     for (let attempt = 1; attempt <= retries; attempt++) {
       try {
@@ -62,6 +90,11 @@ class DigestPipeline extends BasePipeline {
     }
   }
 
+  /**
+   * Runs the entire pipeline process.
+   * Executes stages such as file setup, prompt processing, static file generation, and finalization.
+   * @async
+   */
   async run() {
     try {
       const context = {
