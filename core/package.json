@@ -1,6 +1,6 @@
 {
   "name": "core",
-  "version": "0.2.00",
+  "version": "0.2.01",
   "description": "web tools",
   "private": true,
   "engines": {
