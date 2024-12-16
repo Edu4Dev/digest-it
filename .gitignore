@@ -2,27 +2,48 @@
 desktop.ini
 
 # dependencies
-core/node_modules
 /node_modules
 /.pnp
 .pnp.js
+
+
+# nextjs-ai-times
+nextjs-ai-times/node_modules
+nextjs-ai-times/public/
+nextjs-ai-times/.next/
+nextjs-ai-times/out/
+nextjs-ai-times/node_modules
+nextjs-ai-times/out
+nextjs-ai-times/.next
+nextjs-ai-times/.env*
+nextjs-ai-times/.env.local
+!nextjs-ai-times/.env.local.example
+# nextjs-ai-times/public/*.xml
+# nextjs-ai-times/public/robots.txt
+# nextjs-ai-times/public/ads.txt
+# nextjs-ai-times/public/admin/config.yml
+
+# core
+core/node_modules
+core/.next/
+core/out/
+core/node_modules
+core/out
+core/.next
+core/.env*
+core/.env.local
+core/.env.local.example
 
 # testing
 /coverage
 
 # next.js
-core/public/
-core/.next/
-core/out/
 .next/
 
 # github workspaces
 ../../node_modules
-core/node_modules
 ../out
-core/out
 ../.next
-core/.next
 
 # production
 /build
@@ -37,12 +58,10 @@ yarn-debug.log*
 yarn-error.log*
 
 #  local env files
+.env
 .env.*
 !.env.example
-core/.env*
-core/.env.local
 .env.local
-!core/.env.local.example
 
 # vercel
 .vercel
@@ -54,14 +73,12 @@ node_modules
 
 # Local Netlify folder
 .netlify
-
 deno.lock
 
 # content/public/*.xml
 # content/public/admin/config.yml
 # # content/public/amp/*
 
-# core/public/*.xml
-# core/public/robots.txt
-# core/public/ads.txt
-# core/public/admin/config.yml
+# workflows
+.github
+.github/workflows

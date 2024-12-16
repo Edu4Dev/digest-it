@@ -1,6 +1,6 @@
 const path = require("path"); // Não esqueça de importar o módulo `path` se ainda não foi feito
 const appRoot = require("app-root-path");
-const env = appRoot + `/core/.env`;
+const env = appRoot + `/.env`;
 
 require("dotenv").config({
   path: env,
@@ -115,7 +115,7 @@ const mainProps = {
     versionFile: path.join(`${appRoot}`, `/content/settings/version.json`),
     stylesPath: path.join(`${appRoot}`, `/content/styles`),
     publicSourcePath: path.join(`${appRoot}`, `/content/public`),
-    destinationSourcePath: path.join(`${appRoot}`, `/core/public`),
+    destinationSourcePath: path.join(`${appRoot}`, `/nextjs-ai-times/public`),
     workflowsDir: path.join(`${appRoot}`, `/.github/workflows`),
   },
   apiKeys: {

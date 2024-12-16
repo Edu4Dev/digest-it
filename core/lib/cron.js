@@ -69,10 +69,10 @@ jobs:
 
       - name: "Create env file"
         run: |
-          touch core/.env
-          echo CHATGPT_API_KEY=\${{ secrets.CHATGPT_API_KEY }} >> core/.env
-          echo CLOUDINARY_API_SECRET=\${{ secrets.CLOUDINARY_API_SECRET }} >> core/.env
-          cat core/.env
+          touch ./.env
+          echo CHATGPT_API_KEY=\${{ secrets.CHATGPT_API_KEY }} >> ./.env
+          echo CLOUDINARY_API_SECRET=\${{ secrets.CLOUDINARY_API_SECRET }} >> ./.env
+          cat ./.env
 
       - name: Set up Node.js
         uses: actions/setup-node@v3

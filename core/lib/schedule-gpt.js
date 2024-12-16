@@ -213,10 +213,13 @@ async function generateGPTWorkFlow(workflowsFolderPath, autoPostData) {
       return;
   }
   console.log("what 0");
-
-  const fileName = `${workflowsFolderPath}/gpt-schedule-${postFrequencyLower}-${
+  const preFileName = `gpt-schedule-${postFrequencyLower}-${
     weeklyPostDayLower === "off" ? "daily" : weeklyPostDayLower
   }.yml`;
+
+  const fileName = path.join(workflowsFolderPath, preFileName);
+  console.log(fileName);
+
   console.log("what 1");
 
   // Verificar se o arquivo já existe
@@ -232,7 +235,10 @@ async function generateGPTWorkFlow(workflowsFolderPath, autoPostData) {
 
   try {
     console.log("what 3");
-    fs.writeFileSync(fileName, ymlContent);
+    console.log("fileName:;");
+    console.log(fileName);
+
+    fs.outputFileSync(fileName, ymlContent);
     console.log(`✔️ [CRON JOB]: stored successfully. file ${fileName}.`);
     return process.exit(0);
   } catch (error) {
