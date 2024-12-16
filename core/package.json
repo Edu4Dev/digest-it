@@ -17,6 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node ./triggers/build.js",
     "build": "node ./triggers/build.js",
+    "sync": "node ./lib/sync.js",
     "digest": "node ./triggers/digest.js",
     "atom": "node ./triggers/atom.js",
     "autogpt": "node ./triggers/chatGPT-auto.js",

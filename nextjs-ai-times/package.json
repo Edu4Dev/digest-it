@@ -1,6 +1,6 @@
 {
-  "name": "boilerplate-times-core",
-  "version": "1.0.0-journal.1.0.0",
+  "name": "nextjs-ai-times",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "docs": "jsdoc -r ./src -d ../content/docs/jsdocs -R ../content/docs/jsdocs/README.md",
