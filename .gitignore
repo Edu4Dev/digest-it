@@ -74,6 +74,8 @@ node_modules
 # Local Netlify folder
 .netlify
 deno.lock
+# content
+content
 
 # content/public/*.xml
 # content/public/admin/config.yml
