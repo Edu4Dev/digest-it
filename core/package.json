@@ -1,0 +1,47 @@
+{
+  "name": "core",
+  "version": "0.2.00",
+  "description": "web tools",
+  "private": true,
+  "engines": {
+    "node": "^20.12.2",
+    "npm": "^10.5.0"
+  },
+  "bin": {
+    "digest-it": "CLI.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./triggers/build.js",
+    "build": "node ./triggers/build.js",
+    "digest": "node ./triggers/digest.js",
+    "atom": "node ./triggers/atom.js",
+    "autogpt": "node ./triggers/chatGPT-auto.js",
+    "chatgpt": "node ./triggers/chatGPT.js",
+    "content": "node ./triggers/content.js",
+    "decap": "node ./triggers/decap.js",
+    "schedule": "node ./triggers/post-schedule.js",
+    "rss": "node ./triggers/rss.js",
+    "sass": "node ./triggers/sass.js",
+    "sitemaps": "node ./triggers/sitemaps.js",
+    "stories": "node ./triggers/amp-stories.js",
+    "static": "node ./triggers/static.js",
+    "update": "node ./triggers/post-update.js",
+    "workflows": "node ./triggers/workflows.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edu4Dev/digest-it.git"
+  },
+  "keywords": [
+    "digest"
+  ],
+  "author": "Milton Bolonha",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "sharp": "^0.33.5"
+  }
+}

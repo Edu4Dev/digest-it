@@ -1,7 +1,12 @@
 {
   "name": "digest-it",
-  "version": "0.1.47",
+  "version": "0.2.00",
   "description": "web tools",
+  "private": false,
+  "workspaces": [
+    "nextjs-ai-times",
+    "core"
+  ],
   "main": "index.js",
   "engines": {
     "node": "^20.12.2",
@@ -10,27 +15,24 @@
   "bin": {
     "digest-it": "CLI.js"
   },
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./triggers/build.js && next dev",
-    "build": "node ./triggers/build.js && next build",
-    "digest": "node ./triggers/digest.js",
-    "atom": "node ./triggers/atom.js",
-    "autogpt": "node ./triggers/chatGPT-auto.js",
-    "chatgpt": "node ./triggers/chatGPT.js",
-    "content": "node ./triggers/content.js",
-    "decap": "node ./triggers/decap.js",
-    "schedule": "node ./triggers/post-schedule.js",
-    "rss": "node ./triggers/rss.js",
-    "sass": "node ./triggers/sass.js",
-    "sitemaps": "node ./triggers/sitemaps.js",
-    "stories": "node ./triggers/amp-stories.js",
-    "static": "node ./triggers/static.js",
-    "update": "node ./triggers/post-update.js",
-    "workflows": "node ./triggers/workflows.js"
+    "dev": "npm run dev -w core && npm run dev -w nextjs-ai-times",
+    "build": "npm run build -w core && npm run build -w nextjs-ai-times",
+    "digest": "npm run digest -w core",
+    "atom": "npm run atom -w core",
+    "autogpt": "npm run autogpt -w core",
+    "chatgpt": "npm run chatgpt -w core",
+    "content": "npm run content -w core",
+    "decap": "npm run decap -w core",
+    "schedule": "npm run schedule -w core",
+    "rss": "npm run rss -w core",
+    "sass": "npm run sass -w core",
+    "sitemaps": "npm run sitemaps -w core",
+    "stories": "npm run stories -w core",
+    "static": "npm run static -w core",
+    "update": "npm run update -w core",
+    "workflows": "npm run workflows -w core"
   },
   "repository": {
     "type": "git",
