@@ -1,6 +1,6 @@
 {
   "name": "digest-it",
-  "version": "0.2.03",
+  "version": "0.2.04",
   "description": "web tools",
   "private": false,
   "workspaces": [
