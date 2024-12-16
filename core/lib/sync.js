@@ -21,7 +21,7 @@ const fs = require("fs-extra");
 const matter = require("gray-matter");
 const { parse } = require("node-html-parser");
 const path = require("path");
-const slugify = require("slugify");
+const slugify = require("../utils/slugify");
 const showdown = require("showdown");
 const rootFolder = require("app-root-path");
 const contentFolder = rootFolder + `/content`;
@@ -190,9 +190,7 @@ async function createJsonAllMDFiles() {
   const postsCategories = [
     ...new Set(
       allPostsData.flatMap((file) =>
-        file.frontmatter.categories.map((category) =>
-          slugify(category).toLowerCase()
-        )
+        file.frontmatter.categories.map((category) => slugify(category))
       )
     ),
   ];
