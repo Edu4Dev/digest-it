@@ -4,12 +4,12 @@ const {
   generateIndexSitemap,
   generateFeedsSitemap,
 } = require("../lib/sitemaps");
-const { writeAtom } = require("../lib/file-writers/atom");
-const { writeRSS } = require("../lib/file-writers/rss");
-const { writeAmpStories } = require("../lib/file-writers/ampStory");
+const { writeAtom } = require("../lib/atom");
+const { writeRSS } = require("../lib/rss");
+const { writeAmpStories } = require("../lib/ampStory");
 const executeStep = require("../utils/execute-step");
 
-class StaticFileGenerator {
+class StaticFilesGenerator {
   async generateStaticFiles(config, context) {
     if (!config || typeof config !== "object" || Array.isArray(config)) {
       console.warn("⚠️ - Configuração inválida em generateStaticFiles");
@@ -131,4 +131,4 @@ class StaticFileGenerator {
   }
 }
 
-module.exports = StaticFileGenerator;
+module.exports = StaticFilesGenerator;

@@ -1,10 +1,18 @@
 class BasePipeline {
-  constructor(configs, paths, apiKeys, autoPost = false, debug = false) {
+  constructor(
+    configs,
+    paths,
+    apiKeys,
+    autoPost = false,
+    debug = false,
+    devMode = false
+  ) {
     this.configs = configs;
     this.paths = paths;
     this.apiKeys = apiKeys;
     this.autoPost = autoPost;
     this.debug = debug;
+    this.devMode = devMode;
   }
 
   safeRequire(path) {

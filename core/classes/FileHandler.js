@@ -1,9 +1,7 @@
-const {
-  writeAdminConfigs,
-  writeAdsTxt,
-  writeStylesScss,
-  writeRobotsTxt,
-} = require("../lib/file-writers");
+const writeAdminConfigs = require("../lib/decap");
+const writeAdsTxt = require("../lib/adsTxt");
+const writeStylesScss = require("../lib/sass");
+const writeRobotsTxt = require("../lib/robots");
 
 class FileHandler {
   async setupEssentialFiles(config, context) {

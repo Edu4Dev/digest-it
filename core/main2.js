@@ -6,7 +6,7 @@
 const BasePipeline = require("./classes/BasePipeline");
 const FileHandler = require("./classes/FileHandler");
 const PromptProcessor = require("./classes/PromptProcessor");
-const StaticFileGenerator = require("./classes/StaticFileGenerator");
+const StaticFilesGenerator = require("./classes/StaticFilesGenerator");
 const FinalPipeline = require("./classes/FinalPipeline");
 const mainProps = require("./config");
 const debugMe = require("./utils/debugMe"); // Logs detalhados com debugMe
@@ -107,7 +107,7 @@ class DigestPipeline extends BasePipeline {
 
       const fileHandler = new FileHandler();
       const promptProcessor = new PromptProcessor();
-      const staticFileGenerator = new StaticFileGenerator();
+      const staticFilesGenerator = new StaticFilesGenerator();
       const finalPipeline = new FinalPipeline();
 
       debugMe("🚀 Iniciando a Pipeline de Digestão...");
@@ -130,42 +130,42 @@ class DigestPipeline extends BasePipeline {
         [this.configs.promptDigestion, context]
       );
 
-      // Execução paralela no StaticFileGenerator
+      // Execução paralela no staticFilesGenerator
       debugMe("📝 Gerando arquivos estáticos em paralelo...");
       const staticTasks = [
         this.withRetry(
           "📄 Index Sitemaps",
-          staticFileGenerator.generateStaticFiles.bind(staticFileGenerator),
+          staticFilesGenerator.generateStaticFiles.bind(staticFilesGenerator),
           [this.configs.staticFiles.indexSitemap, context]
         ),
         this.withRetry(
           "📰 Posts Sitemaps",
-          staticFileGenerator.generateStaticFiles.bind(staticFileGenerator),
+          staticFilesGenerator.generateStaticFiles.bind(staticFilesGenerator),
           [this.configs.staticFiles.postSitemap, context]
         ),
         this.withRetry(
           "📑 Pages Sitemaps",
-          staticFileGenerator.generateStaticFiles.bind(staticFileGenerator),
+          staticFilesGenerator.generateStaticFiles.bind(staticFilesGenerator),
           [this.configs.staticFiles.pageSitemap, context]
         ),
         this.withRetry(
           "📡 Feeds Sitemaps",
-          staticFileGenerator.generateStaticFiles.bind(staticFileGenerator),
+          staticFilesGenerator.generateStaticFiles.bind(staticFilesGenerator),
           [this.configs.staticFiles.feedsSitemaps, context]
         ),
         this.withRetry(
           "📨 Atom Feeds",
-          staticFileGenerator.generateStaticFiles.bind(staticFileGenerator),
+          staticFilesGenerator.generateStaticFiles.bind(staticFilesGenerator),
           [this.configs.staticFiles.atom, context]
         ),
         this.withRetry(
           "📰 RSS Feeds",
-          staticFileGenerator.generateStaticFiles.bind(staticFileGenerator),
+          staticFilesGenerator.generateStaticFiles.bind(staticFilesGenerator),
           [this.configs.staticFiles.rss, context]
         ),
         this.withRetry(
           "⚡ AMP Stories",
-          staticFileGenerator.generateStaticFiles.bind(staticFileGenerator),
+          staticFilesGenerator.generateStaticFiles.bind(staticFilesGenerator),
           [this.configs.staticFiles.ampStories, context]
         ),
       ];

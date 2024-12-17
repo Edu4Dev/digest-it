@@ -19,6 +19,7 @@ require("dotenv").config({
  * @property {ApiKeys} apiKeys - API keys for external services.
  * @property {boolean} autoPost - Toggle[`true`]: enable automatic posting.
  * @property {boolean} debug - Toggle[`true`]: enable debug mode.
+ * @property {boolean} devMode - Toggle[`true`]: enable devMode mode.
  */
 
 /**
@@ -124,6 +125,7 @@ const mainProps = {
   },
   autoPost: false,
   debug: true,
+  devMode: false,
 };
 
 module.exports = mainProps;

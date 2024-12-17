@@ -3,7 +3,8 @@ var rootFolder = require("app-root-path");
 // const path = require("path");
 
 const publicSourceFolder = rootFolder + `/content/public`;
-const destinationSourceFolder = rootFolder + `/nextjs-ai-times/public`;
+const destinationSourceFolder =
+  rootFolder + `node_modules/digest-it/nextjs-ai-times/public`;
 
 async function syncPublicFiles() {
   try {

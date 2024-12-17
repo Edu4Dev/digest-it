@@ -1,6 +1,6 @@
 {
   "name": "core",
-  "version": "0.2.02",
+  "version": "0.2.30",
   "description": "web tools",
   "private": true,
   "engines": {
@@ -17,6 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node ./triggers/build.js",
     "build": "node ./triggers/build.js",
+    "export": "node ./triggers/export.js",
     "sync": "node ./lib/sync.js",
     "digest": "node ./triggers/digest.js",
     "atom": "node ./triggers/atom.js",

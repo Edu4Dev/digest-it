@@ -1,8 +1,9 @@
 const BasePipeline = require("./classes/BasePipeline");
 const FileHandler = require("./classes/FileHandler");
 const PromptProcessor = require("./classes/PromptProcessor");
-const StaticFileGenerator = require("./classes/StaticFileGenerator");
+const StaticFileGenerator = require("./classes/StaticFilesGenerator");
 const FinalPipeline = require("./classes/FinalPipeline");
+const ExportOutput = require("./classes/ExportOutput");
 const mainProps = require("./config");
 
 class DigestPipeline extends BasePipeline {
@@ -11,10 +12,11 @@ class DigestPipeline extends BasePipeline {
     userPaths = {},
     userKeys = {},
     autoPost = false,
-    userDebug = false
+    userDebug = false,
+    userDevMode = false
   ) {
     const mergedConfigs = { ...mainProps.configs, ...userConfigs };
-    super(mergedConfigs, userPaths, userKeys, autoPost, userDebug);
+    super(mergedConfigs, userPaths, userKeys, autoPost, userDebug, userDevMode);
   }
 
   async run() {
@@ -29,8 +31,9 @@ class DigestPipeline extends BasePipeline {
 
       const fileHandler = new FileHandler();
       const promptProcessor = new PromptProcessor();
-      const staticFileGenerator = new StaticFileGenerator();
+      const staticGenerator = new StaticFileGenerator();
       const finalPipeline = new FinalPipeline();
+      const exportOut = new ExportOutput();
 
       await fileHandler.setupEssentialFiles(
         this.configs.essentialFiles,
@@ -40,11 +43,14 @@ class DigestPipeline extends BasePipeline {
         this.configs.promptDigestion,
         context
       );
-      await staticFileGenerator.generateStaticFiles(
+      await staticGenerator.generateStaticFiles(
         this.configs.staticFiles,
         context
       );
       await finalPipeline.runFinalStep(this.configs.finalPipe, context);
+      console.log("chama exportOut.runExportOutput");
+
+      await exportOut.runExportOutput(this.configs, this.devMode);
     } catch (error) {
       console.error("Erro durante a execução do pipeline:", error);
       throw new Error(`Pipeline falhou: ${error.message}`);
