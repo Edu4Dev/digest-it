@@ -11,10 +11,7 @@ desktop.ini
 nextjs-ai-times/node_modules
 nextjs-ai-times/public/
 nextjs-ai-times/.next/
-nextjs-ai-times/out/
-nextjs-ai-times/node_modules
 nextjs-ai-times/out
-nextjs-ai-times/.next
 nextjs-ai-times/.env*
 nextjs-ai-times/.env.local
 !nextjs-ai-times/.env.local.example
@@ -33,6 +30,9 @@ core/.next
 core/.env*
 core/.env.local
 core/.env.local.example
+
+# Output
+output
 
 # testing
 /coverage
